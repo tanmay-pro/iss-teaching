@@ -1,0 +1,41 @@
+p, li {
+    font-size: 20px;
+}
+
+.xyz {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+.footer {
+    padding: 20px;
+}
+
+.centered {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+a {
+    color: cyan;
+}
+
+.paris {
+    font-style: italic;
+}
+.newyork {
+    font-weight: bold;
+}
+
+.paris li {
+    line-height: 1.5;
+}
