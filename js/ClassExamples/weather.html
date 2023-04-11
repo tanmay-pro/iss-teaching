@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Open Food Facts Example</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+
+	<h1>Product Information</h1>
+
+	<div id="product-info">
+		<p>Loading product information...</p>
+	</div>
+
+	<script>
+		// Make a request to the Open Food Facts API
+        link = "https://world.openfoodfacts.org/api/v0/product/737628064502.json"
+        
+		fetch('https://world.openfoodfacts.org/api/v0/product.json')
+			.then(response => response.json())
+			.then(data => {
+				// Update the product-info div with some of the product information
+				document.getElementById('product-info').innerHTML = `
+					<p>Name: ${data.product.product_name}</p>
+					<p>Brand: ${data.product.brands}</p>
+					<p>Ingredients: ${data.product.ingredients_text}</p>
+				`;
+			})
+			.catch(error => {
+				console.error(error);
+				document.getElementById('product-info').innerHTML = `
+					<p>There was an error loading product information.</p>
+				`;
+			});
+	</script>
+
+</body>
+</html>
